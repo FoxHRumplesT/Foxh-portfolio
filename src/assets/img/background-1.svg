@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2296.863" height="1571.932" viewBox="0 0 2296.863 1571.932">
+  <defs>
+    <filter id="Pen_tool_made" x="52.802" y="203.045" width="2244.061" height="1368.886" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="46.5" result="blur"/>
+      <feFlood flood-color="#001aff"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Pen_tool_made-2" x="0" y="0" width="2269.877" height="1224.952" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="46.5" result="blur-2"/>
+      <feFlood flood-color="#001aff"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_3619" data-name="Grupo 3619" transform="translate(214.431 231.423)">
+    <g transform="matrix(1, 0, 0, 1, -214.43, -231.42)" filter="url(#Pen_tool_made)">
+      <path id="Pen_tool_made-3" data-name="Pen tool made" d="M2103.718,4368.744s244.2-342.778,569.057-206.115,450.317,172.51,631.788,123.221c110.515-30.017,217.457-303.543,371.336-468.624,99.253-106.479,283.4-135.058,283.4-135.058" transform="matrix(-0.97, -0.22, 0.22, -0.97, 3222.56, 5488.17)" fill="none" stroke="rgba(62,82,255,0.22)" stroke-width="4" stroke-dasharray="8 11" opacity="0.81"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -214.43, -231.42)" filter="url(#Pen_tool_made-2)">
+      <path id="Pen_tool_made-4" data-name="Pen tool made" d="M1753.06,4047.808c71.793,13.152,360.122,307.039,505.072,311.932,179.7,6.066,226.633-272.686,404.249-197.111,321.184,136.663,445.227,172.51,624.647,123.221s385.421-450.317,385.421-450.317" transform="translate(-2430.88 -2773.32) rotate(-13)" fill="none" stroke="rgba(62,82,255,0.22)" stroke-width="4" stroke-dasharray="8 11" opacity="0.81"/>
+    </g>
+  </g>
+</svg>

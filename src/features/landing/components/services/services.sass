@@ -1,0 +1,70 @@
+@import '../../../../assets/styles/mixins'
+
+.services
+  +flex(center, center, column)
+  margin: 0 auto
+  min-width: calc(1366px - 40px)
+  max-width: 1600px
+  position: relative
+  margin-bottom: 100px
+  .services-header
+    margin-bottom: 20px
+    .title
+      font-size: 40px
+      margin-bottom: 24px
+      color: var(--black-1)
+      font-weight: var(--bold)
+      font-family: var(--title)
+    .subtitle
+      font-size: 16px
+      text-align: center
+      color: var(--black-2)
+      font-family: var(--text)
+      font-weight: var(--semibold)
+  .items
+    display: grid
+    margin: 0 20px
+    grid-template-rows: 400px 400px
+    grid-template-columns: 33% 33% 33%
+    li
+      +flex(center, center)
+      transition: all .5s
+      &:hover
+        border-radius: 10px
+        background-color: var(--white-1)
+        box-shadow: 0px 56px 99px rgba(var(--blue-2-rgb), .15)
+      .service
+        +flex(center, center, column)
+        figure
+          width: 100px
+          .icon
+            width: 100%
+        .title
+          font-size: 22px
+          text-align: center
+          margin-bottom: 24px
+          color: var(--black-1)
+          font-family: var(--title)
+          font-weight: var(--bold)
+        .description
+          margin: 0 60px
+          font-size: 16px
+          text-align: center
+          color: var(--black-2)
+          font-family: var(--text)
+          font-weight: var(--semibold)
+
++for-phone-only
+  .services
+    min-width: 100%
+    margin-bottom: 20px
+    .services-header
+      margin: 0 20px 20px 20px
+      .title
+        font-size: 32px
+        text-align: center
+    .items
+      margin: 0 20px
+      grid-auto-rows: 330px
+      grid-template-rows: none
+      grid-template-columns: 100%

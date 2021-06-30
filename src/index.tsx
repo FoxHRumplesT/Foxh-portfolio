@@ -1,15 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.sass';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+(window as any).renderPortfolio = (containerId: string) => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById(containerId),
+  );
+};
+
+(window as any).unmountPortfolio = (containerId: string) => {
+  ReactDOM.unmountComponentAtNode(
+    document.getElementById(containerId) as Element | DocumentFragment
+  );
+};
+
+if (!document.getElementById('Portfolio-container')) {
+  ReactDOM.render(<App />, document.getElementById('root'));
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,0 +1,71 @@
+@import '../../../../assets/styles/mixins'
+
+.my-workflow
+  +flex(center, center, column)
+  margin: 0 auto
+  min-width: calc(1366px - 40px)
+  max-width: 1600px
+  position: relative
+  margin-bottom: 180px
+  .my-workflow-header
+    margin-bottom: 50px
+    .title
+      font-size: 40px
+      text-align: center
+      margin-bottom: 24px
+      color: var(--black-1)
+      font-weight: var(--bold)
+      font-family: var(--title)
+    .subtitle
+      font-size: 16px
+      text-align: center
+      color: var(--black-2)
+      font-family: var(--text)
+      font-weight: var(--semibold)
+  .workflow
+    .items
+      display: grid
+      grid-auto-rows: 120px
+      grid-template-columns: 33% 33% 33%
+      li
+        +flex(center, center)
+        .item
+          +flex(center, center)
+          .circle
+            +flex(center, center)
+            width: 58px
+            height: 58px
+            flex: 0 0 auto
+            margin-right: 26px
+            border-radius: 50%
+            background-color: #E66E6E
+            .number
+              font-size: 20px
+              color: var(--white-1)
+              font-weight: var(--bold)
+              font-family: var(--title)
+          .texts
+            max-width: 290px
+            .name
+              font-size: 20px
+              margin-bottom: 6px
+              font-family: var(--text)
+
++for-phone-only
+  .my-workflow
+    min-width: 100%
+    margin-bottom: 20px
+    .my-workflow-header
+      margin: 0 20px 20px 20px
+      .title
+        font-size: 32px
+        text-align: center      
+    .workflow
+      margin: 20px
+      .items
+        display: grid
+        grid-auto-rows: 120px
+        grid-template-columns: 100%
+        li
+          .item
+            .texts

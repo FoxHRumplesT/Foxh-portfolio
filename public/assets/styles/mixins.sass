@@ -1,0 +1,41 @@
+=flex($alignItems: flex-start, $justifyContent: flex-start, $flexDirection: row)
+  display: -webkit-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -moz-justify-content: $justifyContent
+  -ms-justify-content: $justifyContent
+  -webkit-justify-content: $justifyContent
+  justify-content: $justifyContent
+  -moz-align-items: $alignItems
+  -ms-align-items: $alignItems
+  -webkit-align-items: $alignItems
+  -webkit-box-align: $alignItems
+  -ms-flex-align: $alignItems
+  align-items: $alignItems
+  -moz-flex-direction: $flexDirection
+  -ms-flex-direction: $flexDirection
+  -webkit-flex-direction: $flexDirection
+  -webkit-flex-direction: $flexDirection
+  -ms-flex-direction: $flexDirection
+  flex-direction: $flexDirection
+
+@mixin for-phone-only
+  @media (max-width: 599px)
+    @content
+
+@mixin for-tablet-portrait-up
+  @media (min-width: 600px)
+    @content
+
+@mixin for-tablet-landscape-up
+  @media (min-width: 900px)
+    @content
+
+@mixin for-desktop-up
+  @media (min-width: 1200px)
+    @content
+
+@mixin for-big-desktop-up
+  @media (min-width: 1800px)
+    @content
