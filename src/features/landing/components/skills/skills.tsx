@@ -41,7 +41,7 @@ const Skills: React.FC<SkillsProps> = (props) => {
 
   const allSkills = () => {
     return skillsList.map((s, i) =>
-      <li>
+      <li key={`skills-${i}`}>
         <div className="item">
           <img src={checkIcon} alt="Check" />
           <p className="name">{ s.name }</p>

@@ -9,7 +9,7 @@ const Workflow: React.FC<WorkflowProps> = (props) => {
 
   const allWorkflow = () => {
     return [1,1,1,1,1,1,1,1].map((s, i) =>
-      <li>
+      <li key={`workflow-${i}`}>
         <div className="item">
           <div className="circle">
             <span className="number">1</span>

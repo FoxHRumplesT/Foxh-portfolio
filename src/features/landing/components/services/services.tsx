@@ -43,7 +43,7 @@ const Services: React.FC<ServicesProps> = (props) => {
 
   const allServices = () => {
     return servicesList.map((s, i) =>
-      <li>
+      <li key={`service-${i}`}>
         <div className="service">
           <figure>
             <img src={serviceImage(s.name)} alt="Website" className="icon" />
@@ -64,8 +64,6 @@ const Services: React.FC<ServicesProps> = (props) => {
       case 'Mobile':
         return servicePhoneImage;
       case 'Infraestructura':
-        return serviceDomainImage;
-      case 'Pensar':
         return serviceDomainImage;
       case 'Pensar':
         return serviceDomainImage;

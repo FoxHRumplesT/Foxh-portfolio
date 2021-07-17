@@ -1,6 +1,6 @@
 import React from 'react';
 import './hero.sass'
-// import photoImage from ';
+import photoImage from '../../../../assets/img/mayuri-kurotsuchi.png';
 
 export interface HeroProps {
   
@@ -13,10 +13,10 @@ const Hero: React.FC<HeroProps> = (props) => {
         <div className="texts">
           <h3>Hola, soy Julian Rojas</h3>
           <h1>Full stack developer</h1>
-          <a href="#" className="hire-me">Contáctame</a>
+          <a href="/" className="hire-me">Contáctame</a>
         </div>
         <figure>
-          <img src={`assets/img/mayuri-kurotsuchi.png`} alt="Julian photo" className="photo" />
+          <img src={photoImage} alt="Julian" className="photo" />
         </figure>
       </div>
     </section>
