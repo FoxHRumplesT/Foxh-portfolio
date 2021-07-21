@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './services.sass'
 import serviceWebsiteImage from '../../../../assets/img/services-website.svg';
 import serviceBackImage from '../../../../assets/img/services-back.svg';
@@ -11,33 +12,35 @@ export interface ServicesProps {
  
 const Services: React.FC<ServicesProps> = (props) => {
 
+  const { t } = useTranslation();
+
   const servicesList: {
     name: string,
     description: string,
   }[] = [
     {
-      name: 'Front end',
-      description: 'Creacion de sitios web y aplicaciones SPA con tu diseño.'
+      name: 'landing.services.frontend.title',
+      description: 'landing.services.frontend.description'
     },
     {
-      name: 'Back end',
-      description: 'Automatización a medida para tu negocio y mejorar la productividad y reportes.'
+      name: 'landing.services.backend.title',
+      description: 'landing.services.backend.description'
     },
     {
-      name: 'Mobile',
-      description: 'Diseño y desarrollo de aplicaciones IOS y Android de acuerdo a tu necesidad.'
+      name: 'landing.services.mobile.title',
+      description: 'landing.services.mobile.description'
     },
     {
-      name: 'Infraestructura',
-      description: 'Asesoramiento en la mejor opción para el montaje, despliegue de tu desarrollo.'
+      name: 'landing.services.infra.title',
+      description: 'landing.services.infra.description'
     },
     {
-      name: 'Pensar',
-      description: 'Asesoramiento en la mejor opción para el montaje, despliegue de tu desarrollo.'
+      name: 'landing.services.think.title',
+      description: 'landing.services.think.description'
     },
     {
-      name: 'Pensar',
-      description: 'Asesoramiento en la mejor opción para el montaje, despliegue de tu desarrollo.'
+      name: 'landing.services.think.title',
+      description: 'landing.services.think.description'
     },
   ];
 
@@ -48,8 +51,8 @@ const Services: React.FC<ServicesProps> = (props) => {
           <figure>
             <img src={serviceImage(s.name)} alt="Website" className="icon" />
           </figure>
-          <h3 className="title">{ s.name }</h3>
-          <p className="description">{ s.description }</p>
+          <h3 className="title">{ t(s.name) }</h3>
+          <p className="description">{ t(s.description) }</p>
         </div>
       </li>
     );
@@ -57,15 +60,15 @@ const Services: React.FC<ServicesProps> = (props) => {
 
   const serviceImage = (serviceName: string): string => {
     switch (serviceName) {
-      case 'Front end':
+      case 'landing.services.frontend.title':
         return serviceWebsiteImage;
-      case 'Back end':
+      case 'landing.services.backend.title':
         return serviceBackImage;
-      case 'Mobile':
+      case 'landing.services.mobile.title':
         return servicePhoneImage;
-      case 'Infraestructura':
+      case 'landing.services.infra.title':
         return serviceDomainImage;
-      case 'Pensar':
+      case 'landing.services.think.title':
         return serviceDomainImage;
       default:
         return serviceDomainImage;
@@ -75,8 +78,8 @@ const Services: React.FC<ServicesProps> = (props) => {
   return (
     <section className="services">
       <header className="services-header">
-        <h2 className="title">Te ofresco el mejor servicio de desarrollo.</h2>
-        <p className="subtitle">Sigo siempre el mejor camino de trabajo, para ofrecerte profesionalismo al menor costo posible.</p>
+        <h2 className="title">{t('landing.services.title')}</h2>
+        <p className="subtitle">{t('landing.services.subtitle')}</p>
       </header>
       <ul className="items">
         {allServices()}

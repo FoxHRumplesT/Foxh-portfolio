@@ -13,11 +13,14 @@ import {
   projectImage9,
   projectImage10,
 } from "../../../../assets/img/";
+import { useTranslation } from "react-i18next";
 
 export interface ProjectsProps {}
 type ProjectType = "all" | "mobile" | "web-app" | "web-page";
 
 const Projects: React.FC<ProjectsProps> = (props) => {
+
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<ProjectType>("all");
   const [isFiltering, setIsFiltering] = useState<boolean>(false);
 
@@ -107,13 +110,8 @@ const Projects: React.FC<ProjectsProps> = (props) => {
   return (
     <section className="projects">
       <header className="projects-header">
-        <h2 className="title">Tengo un gran portafolio, miralo.</h2>
-        <p className="subtitle">
-          Proyectos propios o trabajados para clientes de diferentes tipos y
-          gran variedad de diseños implementados.
-          {/* I always follow professional
-          Workflow and provide you best service with resealable costs. */}
-        </p>
+        <h2 className="title">{t("landing.projects.title")}</h2>
+        <p className="subtitle">{t("landing.projects.subtitle")}</p>
       </header>
       <div className="all-projects">
         <div className="tabs">
@@ -121,25 +119,25 @@ const Projects: React.FC<ProjectsProps> = (props) => {
             className={`tab ${isActiveFilter("all") ? "active" : ""}`}
             onClick={() => handleTabFilter("all")}
           >
-            Todos
+            {t('landing.projects.tabs.all')}
           </span>
           <span
             className={`tab ${isActiveFilter("mobile") ? "active" : ""}`}
             onClick={() => handleTabFilter("mobile")}
           >
-            Aplicación mobile
+            {t('landing.projects.tabs.mobile')}
           </span>
           <span
             className={`tab ${isActiveFilter("web-page") ? "active" : ""}`}
             onClick={() => handleTabFilter("web-page")}
           >
-            Página web
+            {t('landing.projects.tabs.webpage')}
           </span>
           <span
             className={`tab ${isActiveFilter("web-app") ? "active" : ""}`}
             onClick={() => handleTabFilter("web-app")}
           >
-            Aplicacion web
+            {t('landing.projects.tabs.webapp')}
           </span>
         </div>
         <ul className={`items ${isFiltering ? "filtering" : ""}`}>

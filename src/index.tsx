@@ -4,6 +4,8 @@ import './index.sass';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import './translations/i18n';
+
 (window as any).renderPortfolio = (containerId: string) => {
   ReactDOM.render(
     <React.StrictMode>

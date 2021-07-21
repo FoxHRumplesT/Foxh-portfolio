@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './workflow.sass'
 
 export interface WorkflowProps {
@@ -6,6 +7,8 @@ export interface WorkflowProps {
 }
  
 const Workflow: React.FC<WorkflowProps> = (props) => {
+
+  const { t } = useTranslation();
 
   const allWorkflow = () => {
     return [1,1,1,1,1,1,1,1].map((s, i) =>
@@ -26,8 +29,8 @@ const Workflow: React.FC<WorkflowProps> = (props) => {
   return (
     <section className="my-workflow">
       <header className="my-workflow-header">
-        <h2 className="title">Mi flujo de trabajo.</h2>
-        <p className="subtitle">Te proveo un flujo de trabajo profesional, escuchando tus requerimientos y minimizando los gastos al maximo.</p>
+        <h2 className="title">{t('landing.workflow.title')}</h2>
+        <p className="subtitle">{t('landing.workflow.description')}</p>
       </header>
       <div className="workflow">
         <ul className="items">
