@@ -6,24 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './translations/i18n';
 
-(window as any).renderPortfolio = (containerId: string) => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-    document.getElementById(containerId),
-  );
-};
-
-(window as any).unmountPortfolio = (containerId: string) => {
-  ReactDOM.unmountComponentAtNode(
-    document.getElementById(containerId) as Element | DocumentFragment
-  );
-};
-
-if (!document.getElementById('Portfolio-container')) {
-  ReactDOM.render(<App />, document.getElementById('root'));
-}
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

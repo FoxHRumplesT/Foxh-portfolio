@@ -8,6 +8,16 @@ import projectImage7 from "./project-7.png";
 import projectImage8 from "./project-8.png";
 import projectImage9 from "./project-9.png";
 import projectImage10 from "./project-10.png";
+import serviceWebsiteImage from "./services-website.svg"
+import serviceBackImage from "./services-back.svg"
+import servicePhoneImage from "./services-phone.svg"
+import serviceDomainImage from "./services-domain.svg"
+import serviceSeoImage from "./services-seo.svg"
+import serviceWebDesignImage from "./services-web-design.svg"
+import burgerIcon from "./burger.svg";
+import flagCo from "./flag-co.svg";
+import flagUk from "./flag-uk.svg";
+import logo from "./logo.svg";
 
 export {
   projectImage1,
@@ -20,4 +30,14 @@ export {
   projectImage8,
   projectImage9,
   projectImage10,
+  serviceWebsiteImage,
+  serviceBackImage,
+  servicePhoneImage,
+  serviceDomainImage,
+  serviceSeoImage,
+  serviceWebDesignImage,
+  burgerIcon,
+  flagCo,
+  flagUk,
+  logo,
 };

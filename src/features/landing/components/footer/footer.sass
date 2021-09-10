@@ -1,0 +1,63 @@
+@import '../../../../assets/styles/mixins'
+
+.footer
+  height: 500px
+  display: flex
+  background-color: #F1F1F1
+  .content
+    margin: auto
+    display: flex
+    min-width: 1366px
+    max-width: 1600px
+    align-items: center
+    .page-description
+      margin: 0 20px
+      .figure
+        width: 60px
+        margin: 0 0 40px 0
+        .logo
+          width: 100%
+      .text
+        font-size: 18px
+        max-width: 320px
+        font-weight: 400
+        line-height: 36px
+        color: var(--black-1)
+    .links-section
+      display: flex
+      margin: 0 20px 0 auto
+      .links
+        margin: 0 50px 0 0
+        display: flex
+        flex-direction: column
+        &:last-child
+          margin: 0
+        .title
+          padding: 10px 0
+          font-size: 24px
+          font-weight: bold
+          margin: 0 0 30px 0
+          border-bottom: 3px solid var(--blue-3)
+        .link
+          margin: 0 0 10px 0
+          color: var(--black-1)
+          text-decoration: none
+          .bold
+            font-weight: bold
+
++for-phone-only
+  .footer
+    .content
+      min-width: 100%
+      flex-direction: column
+      .page-description
+        margin: 0 0 20px 0
+        .figure
+          margin: 20px auto
+        .text
+          line-height: 22px
+          text-align: center
+      .links-section
+        margin: 0 20px
+        .links
+          width: 50%

@@ -27,7 +27,7 @@ const Workflow: React.FC<WorkflowProps> = (props) => {
   }
 
   return (
-    <section className="my-workflow">
+    <section id="workflow" className="my-workflow">
       <header className="my-workflow-header">
         <h2 className="title">{t('landing.workflow.title')}</h2>
         <p className="subtitle">{t('landing.workflow.description')}</p>

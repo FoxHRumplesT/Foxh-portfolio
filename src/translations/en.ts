@@ -44,9 +44,13 @@ const en = {
           title: 'Infrastructure',
           description: 'Advice on the best option for assembly, deployment of your development.',
         },
-        think: {
-          title: 'Think',
-          description: 'Advice on the best option for assembly, deployment of your development.',
+        seo: {
+          title: 'SEO',
+          description: 'SEITO.',
+        },
+        design: {
+          title: 'Design',
+          description: 'Design things',
         },
       },
       about: {

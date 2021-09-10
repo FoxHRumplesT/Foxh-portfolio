@@ -44,9 +44,13 @@ const es = {
           title: 'Infraestructura',
           description: 'Asesoramiento en la mejor opción para el montaje, despliegue de tu desarrollo.',
         },
-        think: {
-          title: 'Pensar',
-          description: 'Asesoramiento en la mejor opción para el montaje, despliegue de tu desarrollo.',
+        seo: {
+          title: 'SEO',
+          description: 'SEITO.',
+        },
+        design: {
+          title: 'Design',
+          description: 'Design things',
         },
       },
       about: {

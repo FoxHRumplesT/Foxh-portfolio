@@ -108,7 +108,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
   };
 
   return (
-    <section className="projects">
+    <section id="portfolio" className="projects">
       <header className="projects-header">
         <h2 className="title">{t("landing.projects.title")}</h2>
         <p className="subtitle">{t("landing.projects.subtitle")}</p>

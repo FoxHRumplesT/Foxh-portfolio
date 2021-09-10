@@ -58,7 +58,7 @@ const Skills: React.FC<SkillsProps> = (props) => {
   };
 
   return (
-    <section className="my-skills">
+    <section id="about" className="my-skills">
       <figure>
         <img src={photoImage} alt="" className="photo" />
       </figure>

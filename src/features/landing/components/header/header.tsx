@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { AnimateConfig, easeOutQuad, Scrollchor } from "react-scrollchor";
 import "./header.sass";
 import { langs } from "../../../../translations/i18n";
-import burgerIcon from "../../../../assets/img/burger.svg";
-import flagCo from "../../../../assets/img/flag-co.svg";
-import flagUk from "../../../../assets/img/flag-uk.svg";
+import { logo, burgerIcon, flagCo, flagUk } from "../../../../assets/img";
+
+export const defaultAnimate: AnimateConfig = {
+  offset: -50,
+  duration: 400,
+  easing: easeOutQuad,
+};
 
 export interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = (props) => {
   const { t, i18n } = useTranslation();
 
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(0);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const toggleMobileMenu = (): void => setShowMobileMenu(!showMobileMenu);
@@ -25,7 +30,8 @@ const Header: React.FC<HeaderProps> = (props) => {
 
   const currentFlag = () => {
     let currentFlag: string;
-    switch (i18n.language) {
+    const lang = i18n.language.substr(0, 2)
+    switch (lang) {
       case langs.en.code:
         currentFlag = flagUk;
         break;
@@ -38,12 +44,10 @@ const Header: React.FC<HeaderProps> = (props) => {
     }
     return (
       <figure onClick={() => {
-        console.log(i18n.language);
-        
         if (i18n.language.includes(langs.en.code)) return i18n.changeLanguage(langs.es.code);
         if (i18n.language.includes(langs.es.code)) return i18n.changeLanguage(langs.en.code);
       }}>
-        <img src={currentFlag} alt="Flag" />
+        <img src={currentFlag} alt="Flag" /> <span className="code">{lang}</span>
       </figure>
     );
   };
@@ -52,37 +56,45 @@ const Header: React.FC<HeaderProps> = (props) => {
     <header className="header">
       <section className="wrapper-nav-bar">
         <div className="logo-container">
-          <div className="logo">Logo</div>
+          <img src={logo} alt="Logo" className="logo" />
         </div>
         <div className="mobile-burger-icon" onClick={() => toggleMobileMenu()}>
           <img src={burgerIcon} alt="Burger menu" />
         </div>
         <div className="mobile-language language">{currentFlag()}</div>
         <nav className={`nav ${showMobileMenu ? "show" : ""}`}>
-          <span
-            onClick={() => toggleActive(2)}
+          <Scrollchor
+            animate={defaultAnimate}
+            beforeAnimate={() => toggleActive(1)}
+            to={'services'}
             className={`link ${isActive(1) ? "active" : ""}`}
           >
             {t("landing.header.menu.services")}
-          </span>
-          <span
-            onClick={() => toggleActive(1)}
+          </Scrollchor>
+          <Scrollchor
+            animate={defaultAnimate}
+            beforeAnimate={() => toggleActive(2)}
+            to={'about'}
             className={`link ${isActive(2) ? "active" : ""}`}
           >
             {t("landing.header.menu.about")}
-          </span>
-          <span
-            onClick={() => toggleActive(3)}
+          </Scrollchor>
+          <Scrollchor
+            animate={defaultAnimate}
+            beforeAnimate={() => toggleActive(3)}
+            to={'portfolio'}
             className={`link ${isActive(3) ? "active" : ""}`}
           >
             {t("landing.header.menu.portfolio")}
-          </span>
-          <span
-            onClick={() => toggleActive(4)}
+          </Scrollchor>
+          <Scrollchor
+            animate={defaultAnimate}
+            beforeAnimate={() => toggleActive(4)}
+            to={'workflow'}
             className={`link ${isActive(4) ? "active" : ""}`}
           >
             {t("landing.header.menu.workflow")}
-          </span>
+          </Scrollchor>
           <div className="language">{currentFlag()}</div>
           <span className={`link main-button`}>
             {t("landing.header.menu.contact")}
