@@ -1,0 +1,76 @@
+@mixin number-m {
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 500;
+  font-family: var(--mono-font);
+}
+
+@mixin h2-m {
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 500;
+  font-family: var(--mono-font);
+}
+
+@mixin logo-m {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  font-family: var(--mono-font);
+}
+
+@mixin menu-m {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  font-family: var(--mono-font);
+}
+
+@mixin media-m {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: var(--mono-font);
+}
+
+@mixin code-m {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-family: var(--mono-font);
+}
+
+@mixin bg-text-u {
+  font-size: 116px;
+  line-height: 134px;
+  font-weight: 400;
+  font-family: var(--ubuntu-font);
+}
+
+@mixin h1-u {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 400;
+  font-family: var(--ubuntu-font);
+}
+
+@mixin h2-u {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 400;
+  font-family: var(--ubuntu-font);
+}
+
+@mixin button-u {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: var(--ubuntu-font);
+}
+
+@mixin article-u {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  font-family: var(--ubuntu-font);
+}

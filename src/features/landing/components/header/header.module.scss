@@ -1,0 +1,65 @@
+@import "../../../../assets/styles/fonts.scss";
+
+.wrapper {
+  display: flex;
+  height: 170px;
+  padding: 0 128px;
+  align-items: center;
+  background-color: var(--bg-1);
+  border-bottom: 1px solid var(--grey);
+  .mainLogo {
+    display: flex;
+    column-gap: 8px;
+    margin: 0 auto 0 0;
+    align-items: center;
+    .logo {
+      @include logo-m;
+      color: var(--primary-1);
+    }
+    .title {
+      @include logo-m;
+      color: var(--white);
+    }
+  }
+  .nav {
+    .ul {
+      display: flex;
+      column-gap: 32px;
+      .li {
+        display: flex;
+        .link {
+          @include menu-m;
+          display: flex;
+          align-items: center;
+          color: var(--white);
+          text-decoration: none;
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: var(--primary-1);
+          }
+        }
+      }
+    }
+  }
+  .socials {
+    display: flex;
+    column-gap: 32px;
+    margin: 0 0 0 64px;
+    .social {
+      @include media-m;
+      display: flex;
+      column-gap: 8px;
+      align-items: center;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: var(--primary-1);
+      }
+      .icon {
+        font-size: 20px;
+        color: var(--primary-1);
+      }
+    }
+  }
+}

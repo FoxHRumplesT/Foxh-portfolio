@@ -1,0 +1,56 @@
+import { FC } from "react";
+import styles from "./header.module.scss";
+import { Instagram, Linkedin } from "react-feather";
+import UiTag from "~/components/ui-tag";
+
+interface HeaderProps {
+  
+}
+ 
+const Header: FC<HeaderProps> = () => {
+  return (
+    <header className={styles.wrapper}>
+      <div className={styles.mainLogo}>
+        <UiTag className={styles.logo} isClosed>J</UiTag>
+        <h2 className={styles.title}>JulianRojas</h2>
+      </div>
+      <nav className={styles.nav}>
+        <ul className={styles.ul}>
+          <li className={styles.li}>
+            <a href="#main" className={styles.link}>
+              Home
+            </a>
+          </li>
+          <li className={styles.li}>
+            <a href="#about" className={styles.link}>
+              About
+            </a>
+          </li>
+          <li className={styles.li}>
+            <a href="#experience" className={styles.link}>
+              Experience
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section className={styles.socials}>
+        <a
+          className={styles.social}
+          href="https://www.linkedin.com/in/julian-rojas"
+          target="_blank"
+          rel="noreferrer">
+          <Linkedin className={styles.icon} />LinkedIn
+        </a>
+        <a
+          className={styles.social}
+          href="https://www.linkedin.com/in/julian-rojas"
+          target="_blank"
+          rel="noreferrer">
+          <Instagram className={styles.icon} />Instagram
+        </a>
+      </section>
+    </header>
+  );
+}
+ 
+export default Header;
