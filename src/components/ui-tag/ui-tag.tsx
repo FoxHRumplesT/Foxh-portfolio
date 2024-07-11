@@ -14,7 +14,7 @@ const UiTag: FC<UiTagProps> = ({
 }) => {
   return (
     <span className={`${styles.tag} ${className}`}>
-      &lt;{children}{ isClosed ? ' /' : ''}&gt;
+      &lt;{children}{ isClosed ? '/' : ''}&gt;
     </span>
   );
 }

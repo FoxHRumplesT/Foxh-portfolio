@@ -1,0 +1,1 @@
+export { default as IconScrollMouse } from './scroll-mouse';
