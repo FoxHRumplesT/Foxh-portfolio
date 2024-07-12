@@ -14,7 +14,6 @@ const Contact: FC<ContactProps> = ({
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>
-        <IconScrollMouse className={styles.scrollIcon} />
         <SectionTitle text="Contact" className={styles.title} />
         <p className={styles.description}>
           I am always open to new opportunities and collaborations.{'\n'}Feel free to reach out.

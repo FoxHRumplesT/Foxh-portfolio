@@ -1,3 +1,5 @@
+@import './breakpoints';
+
 html {
   --font-ubuntu: 'Ubuntu';
   --font-mono: 'IBM Plex Mono', monospace;
@@ -13,4 +15,16 @@ html {
 
   --header-height: 170px;
   --footer-height: 64px;
+
+  --container-width: 1664px;
+
+  @media screen and (width <= $breakpoint-xxxl) {
+    --header-height: 140px;
+    --container-width: 1224px;
+  }
+
+  @media screen and (width <= $breakpoint-xl) {
+    --header-height: 80px;
+    --container-width: 620px;
+  }
 }

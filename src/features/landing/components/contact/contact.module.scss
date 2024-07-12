@@ -1,4 +1,5 @@
 @import "../../../../assets/styles/fonts.scss";
+@import "../../../../assets/styles/breakpoints.scss";
 
 .section {
   display: flex;
@@ -8,16 +9,12 @@
   background-color: var(--bg-1);
   min-height: calc(100dvh - var(--footer-height));
   .wrapper {
+    width: 100%;
     display: flex;
-    max-width: 1664px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    .scrollIcon {
-      z-index: 2;
-      margin: 0 0 64px 0;
-      color: var(--primary-1);
-    }
+    max-width: var(--container-width);
     .title {
       margin: 0 0 16px 0;
     }
@@ -41,7 +38,6 @@
     .form {
       display: flex;
       row-gap: 64px;
-      min-width: 1120px;
       flex-direction: column;
       .formGroup {
         display: flex;
@@ -87,6 +83,39 @@
         border-radius: 32px;
         align-items: center;
         background-color: var(--primary-1);
+      }
+    }
+  }
+
+  @media screen and (width <=$breakpoint-xxl) {
+    .wrapper {
+      padding: 64px 0;
+    }
+  }
+
+  @media screen and (width <=$breakpoint-xl) {
+    min-height: auto;
+    .wrapper {
+      .form {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (width <=$breakpoint-md) {
+    .wrapper {
+      padding: 32px 24px;
+      .description {
+        margin: 0 0 64px 0;
+      }
+      .ctaTitle {
+        text-wrap: nowrap;
+        padding: 16px 20px;
+      }
+      .form {
+        .formGroup {
+          column-gap: 32px;
+        }
       }
     }
   }

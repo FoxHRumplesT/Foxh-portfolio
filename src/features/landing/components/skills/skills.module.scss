@@ -1,4 +1,5 @@
 @import "../../../../assets/styles/fonts.scss";
+@import "../../../../assets/styles/breakpoints.scss";
 
 .section {
   display: flex;
@@ -8,11 +9,12 @@
   justify-content: center;
   background-color: var(--bg-2);
   .wrapper {
+    width: 100%;
     display: flex;
-    max-width: 1664px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    max-width: var(--container-width);
     .scrollIcon {
       z-index: 2;
       margin: 0 0 64px 0;
@@ -61,6 +63,7 @@
         }
         .text {
           @include media-m;
+          text-align: center;
           white-space: break-spaces;
         }
       }
@@ -92,6 +95,54 @@
           @include h2-m;
           color: var(--white);
           white-space: break-spaces;
+        }
+      }
+    }
+  }
+
+  @media screen and (width <=$breakpoint-xxl) {
+    .wrapper {
+      padding: 64px 0;
+    }
+  }
+
+  @media screen and (width <= $breakpoint-xl) {
+    .wrapper {
+      .scrollIcon {
+        display: none;
+      }
+      .skills {
+        column-gap: 64px;
+      }
+      .technologies {
+        row-gap: 34px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media screen and (width <= $breakpoint-md) {
+    min-height: auto;
+    .wrapper {
+      padding: 32px 24px;
+      .skills {
+        row-gap: 32px;
+        flex-direction: column;
+      }
+      .technologies {
+        margin: 0;
+        row-gap: 32px;
+        column-gap: 64px;
+        .item {
+          .iconCircle {
+            width: 100px;
+            height: 100px;
+            .icon {
+              width: 48px;
+              height: 48px;
+            }
+          }
         }
       }
     }

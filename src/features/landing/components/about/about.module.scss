@@ -1,12 +1,11 @@
 @import "../../../../assets/styles/fonts.scss";
+@import "../../../../assets/styles/breakpoints.scss";
 
-.wrapper {
+.section {
   display: flex;
-  row-gap: 128px;
   min-height: 100dvh;
   position: relative;
   align-items: center;
-  flex-direction: column;
   justify-content: center;
   background-color: var(--bg-2);
   .bgImage {
@@ -20,56 +19,118 @@
     background-size: cover;
     background-position: center;
   }
-  .scrollIcon {
-    z-index: 2;
-    color: var(--primary-1);
-  }
-  .content {
-    z-index: 2;
+  .wrapper {
+    width: 100%;
     display: flex;
-    column-gap: 128px;
+    row-gap: 128px;
     align-items: center;
-    .about {
+    flex-direction: column;
+    justify-content: center;
+    max-width: var(--container-width);
+    .scrollIcon {
+      z-index: 2;
+      color: var(--primary-1);
+    }
+    .content {
+      z-index: 2;
       display: flex;
-      max-width: 880px;
-      flex-direction: column;
-      .title {
-        @include h1-u;
-        padding: 16px 40px;
-        width: fit-content;
-        margin: 0 0 64px 0;
-        color: var(--white);
-        border-radius: 40px 0 40px 0;
-        border: 4px solid var(--primary-2);
-      }
-      .textBox {
+      column-gap: 128px;
+      align-items: center;
+      .about {
         display: flex;
-        padding: 24px 40px;
-        border-radius: 40px;
+        max-width: 880px;
         flex-direction: column;
-        background-color: var(--bg-1);
-        .tag {
-          color: var(--primary-2);
-        }
-        .text {
-          @include media-m;
-          margin: 16px 0;
+        .title {
+          @include h1-u;
+          padding: 16px 40px;
+          width: fit-content;
+          margin: 0 0 64px 0;
           color: var(--white);
-          padding: 0 0 0 16px;
+          border-radius: 40px 0 40px 0;
+          border: 4px solid var(--primary-2);
+        }
+        .textBox {
+          display: flex;
+          padding: 24px 40px;
+          border-radius: 40px;
+          flex-direction: column;
+          background-color: var(--bg-1);
+          .tag {
+            color: var(--primary-2);
+          }
+          .text {
+            @include media-m;
+            margin: 16px 0;
+            color: var(--white);
+            padding: 0 0 0 16px;
+          }
+        }
+      }
+      .figure {
+        width: 472px;
+        display: flex;
+        flex: 0 0 auto;
+        overflow: hidden;
+        align-items: center;
+        border-radius: 16px;
+        justify-content: center;
+        .image {
+          width: 100%;
+          height: 100%;
         }
       }
     }
-    .figure {
-      width: 472px;
-      display: flex;
-      flex: 0 0 auto;
-      overflow: hidden;
-      align-items: center;
-      border-radius: 16px;
-      justify-content: center;
-      .image {
-        width: 100%;
-        height: 100%;
+  }
+
+  @media screen and (width <= $breakpoint-xxxl) {
+    .wrapper {
+      .content {
+        column-gap: 32px;
+      }
+    }
+  }
+
+  @media screen and (width <= $breakpoint-xxl) {
+    .wrapper {
+      padding: 64px 0;
+    }
+  }
+
+  @media screen and (width <= $breakpoint-xl) {
+    .wrapper {
+      padding: 0;
+      row-gap: 64px;
+      .scrollIcon {
+        display: none;
+      }
+      .content {
+        row-gap: 64px;
+        flex-direction: column;
+        .about {
+          .title {
+            padding: 16px 24px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (width <=$breakpoint-md) {
+    .wrapper {
+      padding: 32px 24px;
+      .content {
+        row-gap: 32px;
+        .about {
+          .title {
+            margin: 0 0 32px 0;
+          }
+          .textBox {
+            width: 100%;
+          }
+        }
+        .figure {
+          width: 100%;
+        }
       }
     }
   }

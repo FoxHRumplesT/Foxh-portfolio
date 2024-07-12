@@ -48,7 +48,7 @@ const Skills: FC<SkillsProps> = ({
             <Monitor className={styles.icon} />
             <h6 className={styles.name}>Web Development</h6>
             <p className={styles.text}>
-              Html - Css - Js - React - Vue
+              Html - Css - Js{'\n'}React - Vue
             </p>
           </div>
           <div className={styles.skill}>

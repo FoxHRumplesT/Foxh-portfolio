@@ -1,4 +1,5 @@
 @import "../../../../assets/styles/fonts.scss";
+@import "../../../../assets/styles/breakpoints.scss";
 
 .section {
   display: flex;
@@ -11,10 +12,10 @@
     width: 100%;
     display: flex;
     padding: 64px 0;
-    max-width: 1120px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    max-width: var(--container-width);
     .scrollIcon {
       z-index: 2;
       margin: 0 0 64px 0;
@@ -97,8 +98,42 @@
         .jobDescription {
           @include media-m;
           padding: 0 0 0 16px;
+          width: 80%;
           color: var(--white);
           white-space: break-spaces;
+        }
+      }
+    }
+  }
+
+  @media screen and (width <=$breakpoint-xxl) {
+    .wrapper {
+      padding: 64px 0;
+    }
+  }
+
+  @media screen and (width <=$breakpoint-xl) {
+    .wrapper {
+      .scrollIcon {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (width <= $breakpoint-md) {
+    min-height: auto;
+    .wrapper {
+      padding: 32px 24px;
+      .experiences {
+        .experience {
+          .info {
+            row-gap: 16px;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .jobDescription {
+            width: 100%;
+          }
         }
       }
     }
