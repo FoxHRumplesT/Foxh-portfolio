@@ -74,3 +74,10 @@
   line-height: 32px;
   font-family: var(--ubuntu-font);
 }
+
+@mixin para-u {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  font-family: var(--ubuntu-font);
+}

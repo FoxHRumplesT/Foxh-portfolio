@@ -1,0 +1,18 @@
+@import "../../../../assets/styles/fonts.scss";
+
+.footer {
+  background-color: var(--bg-2);
+  .wrapper {
+    margin: auto;
+    display: flex;
+    max-width: 1664px;
+    align-items: center;
+    height: var(--footer-height);
+    justify-content: space-between;
+    .rights {
+      @include para-u;
+      color: var(--white);
+      white-space: break-spaces;
+    }
+  }
+}

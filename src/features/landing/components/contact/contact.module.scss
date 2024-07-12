@@ -1,0 +1,93 @@
+@import "../../../../assets/styles/fonts.scss";
+
+.section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-2);
+  min-height: calc(100dvh - var(--footer-height));
+  .wrapper {
+    display: flex;
+    max-width: 1664px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .scrollIcon {
+      z-index: 2;
+      margin: 0 0 64px 0;
+      color: var(--primary-1);
+    }
+    .title {
+      margin: 0 0 16px 0;
+    }
+    .description {
+      @include media-m;
+      margin: 0 0 102px 0;
+      text-align: center;
+      padding: 0 0 0 16px;
+      color: var(--white);
+      white-space: break-spaces;
+    }
+    .ctaTitle {
+      @include h2-u;
+      padding: 16px 40px;
+      width: fit-content;
+      margin: 0 0 64px 0;
+      color: var(--white);
+      border-radius: 40px 0 40px 0;
+      border: 4px solid var(--primary-2);
+    }
+    .form {
+      display: flex;
+      row-gap: 64px;
+      min-width: 1120px;
+      flex-direction: column;
+      .formGroup {
+        display: flex;
+        column-gap: 128px;
+        .fieldset {
+          flex: 1;
+          margin: 0;
+          padding: 0;
+          border: none;
+          display: flex;
+          flex-direction: column;
+          .label {
+            @include para-u;
+            padding: 0 0 16px 0;
+            color: var(--primary-2);
+          }
+          .inputBox {
+            display: flex;
+            .input {
+              @include para-u;
+              width: 100%;
+              border: none;
+              outline: none;
+              padding: 8px 2px;
+              color: var(--white);
+              background-color: transparent;
+              border-bottom: 2px solid var(--primary-2);
+              &::placeholder {
+                color: var(--white);
+              }
+            }
+          }
+        }
+      }
+      .cta {
+        @include button-u;
+        height: 56px;
+        margin: auto;
+        display: flex;
+        padding: 0 32px;
+        column-gap: 16px;
+        width: fit-content;
+        border-radius: 32px;
+        align-items: center;
+        background-color: var(--primary-1);
+      }
+    }
+  }
+}

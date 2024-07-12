@@ -2,9 +2,9 @@
 
 .wrapper {
   display: flex;
-  height: 170px;
   padding: 0 128px;
   align-items: center;
+  height: var(--header-height);
   background-color: var(--bg-1);
   border-bottom: 1px solid var(--grey);
   .mainLogo {
