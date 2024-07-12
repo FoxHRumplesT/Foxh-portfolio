@@ -5,10 +5,12 @@ import SectionTitle from "../section-title";
 import { Send } from "react-feather";
 
 interface ContactProps {
-  
+  lng: string;
 }
  
-const Contact: FC<ContactProps> = () => {
+const Contact: FC<ContactProps> = ({
+  lng,
+}) => {
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>

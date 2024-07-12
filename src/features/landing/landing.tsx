@@ -6,18 +6,24 @@ import About from "./components/about";
 import Skills from "./components/skills";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import Experience from "./components/experience";
 
-export interface LandingProps {};
+export interface LandingProps {
+  lng: string;
+};
 
-const Landing: FC<LandingProps> = () => {
+const Landing: FC<LandingProps> = ({
+  lng,
+}) => {
   return (
     <main className={styles.main}>
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Contact />
-      <Footer />
+      <Header lng={lng} />  
+      <Hero lng={lng} />  
+      <About lng={lng} /> 
+      <Experience lng={lng} /> 
+      <Skills lng={lng} />  
+      <Contact lng={lng} />
+      <Footer lng={lng} />  
     </main>
   );
 };

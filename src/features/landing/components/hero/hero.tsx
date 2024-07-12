@@ -4,10 +4,12 @@ import styles from "./hero.module.scss";
 import UiTag from "~/components/ui-tag";
 
 interface HeroProps {
-  
+  lng: string;
 }
  
-const Hero: FC<HeroProps> = () => {
+const Hero: FC<HeroProps> = ({
+  lng,
+}) => {
   return (
     <section className={styles.hero}>
       <div className={styles.mainName}>Developer</div>

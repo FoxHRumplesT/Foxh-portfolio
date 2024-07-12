@@ -62,4 +62,23 @@
       }
     }
   }
+  .languages {
+    display: flex;
+    column-gap: 8px;
+    margin: 0 0 0 64px;
+    .language {
+      @include h3-u;
+      cursor: pointer;
+      color: var(--white);
+      text-decoration: none;
+      white-space: break-spaces;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: var(--primary-1);
+      }
+      &.active {
+        color: var(--primary-2);
+      }
+    }
+  }
 }

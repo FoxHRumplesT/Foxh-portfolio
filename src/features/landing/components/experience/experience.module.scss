@@ -1,0 +1,106 @@
+@import "../../../../assets/styles/fonts.scss";
+
+.section {
+  display: flex;
+  min-height: 100dvh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-1);
+  .wrapper {
+    width: 100%;
+    display: flex;
+    padding: 64px 0;
+    max-width: 1120px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .scrollIcon {
+      z-index: 2;
+      margin: 0 0 64px 0;
+      color: var(--primary-1);
+    }
+    .title {
+      margin: 0 0 16px 0;
+    }
+    .description {
+      @include media-m;
+      margin: 0 0 32px 0;
+      text-align: center;
+      padding: 0 0 0 16px;
+      color: var(--white);
+      white-space: break-spaces;
+    }
+    .experiences {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .experience {
+        display: flex;
+        padding: 32px 0;
+        flex-direction: column;
+        border-bottom: 1px solid var(--grey);
+        &:last-child {
+          border-bottom: none;
+        }
+        .info {
+          display: flex;
+          margin: 0 0 16px 0;
+          align-items: center;
+          justify-content: space-between;
+          .companyRole {
+            row-gap: 4px;
+            display: flex;
+            flex-direction: column;
+            .role {
+              @include h3-u;
+              color: var(--primary-2);
+            }
+            .company {
+              @include para-u;
+              color: var(--white);
+            }
+          }
+          .dates {
+            height: 48px;
+            display: flex;
+            padding: 0 8px;
+            column-gap: 8px;
+            border-radius: 8px;
+            align-items: center;
+            border: 1px solid var(--primary-1);
+            .icon {
+              width: 18px;
+              color: var(--primary-1);
+            }
+            .date {
+              @include para-u;
+              color: var(--white);
+            }
+          }
+        }
+        .location {
+          @include media-m;
+          display: flex;
+          column-gap: 8px;
+          margin: 0 0 16px 0;
+          color: var(--white);
+          align-items: center;
+          .icon {
+            width: 18px;
+            height: 18px;
+          }
+          .locationName {
+            @include para-u;
+          }
+        }
+        .jobDescription {
+          @include media-m;
+          padding: 0 0 0 16px;
+          color: var(--white);
+          white-space: break-spaces;
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--bg-2);
+  background-color: var(--bg-1);
   min-height: calc(100dvh - var(--footer-height));
   .wrapper {
     display: flex;
@@ -23,8 +23,8 @@
     }
     .description {
       @include media-m;
-      margin: 0 0 102px 0;
       text-align: center;
+      margin: 0 0 102px 0;
       padding: 0 0 0 16px;
       color: var(--white);
       white-space: break-spaces;

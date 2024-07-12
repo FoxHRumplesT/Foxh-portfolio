@@ -1,17 +1,24 @@
 import { FC } from "react";
-import styles from "./header.module.scss";
+import Link from "next/link";
 import { Instagram, Linkedin } from "react-feather";
+import { useTranslation } from "~/app/i18n";
+import styles from "./header.module.scss";
 import UiTag from "~/components/ui-tag";
 
 interface HeaderProps {
-  
+  lng: string;
 }
  
-const Header: FC<HeaderProps> = () => {
+const Header: FC<HeaderProps> = async ({
+  lng,
+}) => {
+
+  const { i18n } = await useTranslation(lng, 'landing');
+  
   return (
     <header className={styles.wrapper}>
       <div className={styles.mainLogo}>
-        <UiTag className={styles.logo} isClosed>J</UiTag>
+        <UiTag className={styles.logo} isClosed>J </UiTag>
         <h2 className={styles.title}>JulianRojas</h2>
       </div>
       <nav className={styles.nav}>
@@ -49,6 +56,18 @@ const Header: FC<HeaderProps> = () => {
           <Instagram className={styles.icon} />Instagram
         </a>
       </section>
+      <div className={styles.languages}>
+        <Link
+          href={`/es`}
+          className={`${styles.language} ${i18n.language === 'es' && styles.active}`}>
+          ES
+        </Link>
+        <Link
+          href={`/en`}
+          className={`${styles.language} ${i18n.language === 'en' && styles.active}`}>
+          EN
+        </Link>
+      </div>
     </header>
   );
 }

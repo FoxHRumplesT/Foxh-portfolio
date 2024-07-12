@@ -5,10 +5,12 @@ import SectionTitle from "../section-title";
 import { Monitor, Smartphone } from "react-feather";
 
 interface SkillsProps {
-  
+  lng: string;
 }
  
-const Skills: FC<SkillsProps> = () => {
+const Skills: FC<SkillsProps> = ({
+  lng,
+}) => {
 
   const skills = [
     {
