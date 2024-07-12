@@ -3,71 +3,48 @@ import styles from "./experience.module.scss";
 import { IconScrollMouse } from "~/components/icons";
 import SectionTitle from "../section-title";
 import { Calendar, MapPin } from "react-feather";
+import { useTranslation } from "~/app/i18n";
 
 interface ExperienceProps {
   lng: string;
 }
  
-const Experience: FC<ExperienceProps> = ({
+const Experience: FC<ExperienceProps> = async ({
   lng,
 }) => {
 
-  const experiences = [
-    {
-      role: 'Full stack Developer',
-      company: 'Rappi',
-      date: 'Nov 2023 - Present',
-      location: 'Bogota, Colombia',
-      description: 'I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.'
-    },
-    {
-      role: 'Full stack Developer',
-      company: 'Rappi',
-      date: 'Nov 2023 - Present',
-      location: 'Bogota, Colombia',
-      description: 'I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.'
-    },
-    {
-      role: 'Full stack Developer',
-      company: 'Rappi',
-      date: 'Nov 2023 - Present',
-      location: 'Bogota, Colombia',
-      description: 'I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.'
-    }
-  ];
+  const { t } = await useTranslation(lng, 'landing');
 
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>
         <IconScrollMouse className={styles.scrollIcon} />
-        <SectionTitle text="Experience" className={styles.title} />
+        <SectionTitle text={t('experience.title')} className={styles.title} />
         <p className={styles.description}>
-          I have worked with a variety of companies and projects.{'\n'}I have a wide range of skills and experiences that I have honed over the years.{'\n'}I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works.
+          {t('experience.description')}
         </p>
         <div className={styles.experiences}>
-          {experiences.map((_, index) => (
+          {new Array(6).fill(0).map((_, index) => (
             <div
               key={index}
               className={styles.experience}>
               <div className={styles.info}>
                 <div className={styles.companyRole}>
-                  <h4 className={styles.role}>Full stack Developer</h4>
-                  <p className={styles.company}>Rappi - Full time</p>
+                  <h4 className={styles.role}>{t(`experience.experiences.${index}.role`)}</h4>
+                  <p className={styles.company}>{t(`experience.experiences.${index}.company`)}</p>
                 </div>
                 <div className={styles.dates}>
                   <Calendar className={styles.icon} />
-                  <span className={styles.date}>Nov 2023 - Present</span>
+                  <span className={styles.date}>{t(`experience.experiences.${index}.date`)}</span>
                 </div>
               </div>
               <div className={styles.location}>
                 <MapPin className={styles.icon} />
                 <p className={styles.locationName}>
-                  Bogota, Colombia
+                  {t(`experience.experiences.${index}.location`)}
                 </p>
               </div>
-              <div className={styles.jobDescription}>
-                I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.
-              </div>
+              <div className={styles.jobDescription}>{t(`experience.experiences.${index}.description`)}</div>
             </div>
           ))}
         </div>

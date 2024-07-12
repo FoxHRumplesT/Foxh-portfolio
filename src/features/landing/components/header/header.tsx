@@ -13,7 +13,7 @@ const Header: FC<HeaderProps> = async ({
   lng,
 }) => {
 
-  const { i18n } = await useTranslation(lng, 'landing');
+  const { t, i18n } = await useTranslation(lng, 'landing');
   
   return (
     <header className={styles.header}>
@@ -26,17 +26,17 @@ const Header: FC<HeaderProps> = async ({
           <ul className={styles.ul}>
             <li className={styles.li}>
               <a href="#main" className={styles.link}>
-                Home
+                {t('header.home')}
               </a>
             </li>
             <li className={styles.li}>
               <a href="#about" className={styles.link}>
-                About
+                {t('header.about')}
               </a>
             </li>
             <li className={styles.li}>
               <a href="#experience" className={styles.link}>
-                Experience
+                {t('header.experience')}
               </a>
             </li>
           </ul>

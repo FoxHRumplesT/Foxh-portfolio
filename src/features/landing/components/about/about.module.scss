@@ -35,7 +35,7 @@
       z-index: 2;
       display: flex;
       column-gap: 128px;
-      align-items: center;
+      align-items: flex-end;
       .about {
         display: flex;
         max-width: 880px;
@@ -73,7 +73,6 @@
         overflow: hidden;
         align-items: center;
         border-radius: 16px;
-        justify-content: center;
         .image {
           width: 100%;
           height: 100%;
@@ -84,6 +83,7 @@
 
   @media screen and (width <= $breakpoint-xxxl) {
     .wrapper {
+      padding: 64px 0;
       .content {
         column-gap: 32px;
       }
@@ -122,10 +122,16 @@
         row-gap: 32px;
         .about {
           .title {
-            margin: 0 0 32px 0;
+            @include h2-u;
+            margin: 0 auto 32px auto;
           }
           .textBox {
             width: 100%;
+            padding: 16px 28px;
+            .text {
+              padding: 0 0 0 8px;
+              font-size: 14px;
+            }
           }
         }
         .figure {

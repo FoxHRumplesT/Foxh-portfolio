@@ -2,5 +2,97 @@
   "page": {
     "title": "Julian Rojas - Full Stack Developer",
     "description": "Full Stack Developer with experience in web and mobile app development."
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience"
+  },
+  "hero": {
+    "mainTitle": "Developer",
+    "presentationJob": "Full-stack Developer",
+    "presentationTime": "Full time / Freelance",
+    "ctaButton": "Download CV",
+    "mainText": "Hey\nI’m <strong>{{name}}</strong>,\nFull-stack developer",
+    "resume": "I am an experienced software developer specializing in creating efficient and innovative solutions.\nWhether as a freelancer or an employee, I bring a meticulous approach to every project, ensuring high-quality results.",
+    "ctaText": "let’s talk",
+    "topSkillLanguages": "Programming\nLanguages",
+    "topSkillTools": "Development\nTools",
+    "topSkillYears": "Years of\nExperience"
+  },
+  "about": {
+    "title": "About me",
+    "text": "Meet me, a highly skilled software developer with a passion for creating innovative and efficient software solutions. With years of experience in the industry, I have honed my expertise in various programming languages and frameworks, including JavaScript, Python, and C#. Whether working as a freelancer or as an employee within a team, I bring a meticulous and detail-oriented approach to every project. My ability to understand complex requirements and translate them into functional, user-friendly applications has earned me a reputation for excellence and reliability. From developing web applications to designing scalable backend systems, I am dedicated to delivering high-quality solutions that meet and exceed client expectations.\n\nIn addition to my technical prowess, I am known for my strong communication skills and collaborative spirit. I thrive in dynamic environments where I can work closely with clients and team members to ensure that all project goals are achieved on time and within budget. My proactive problem-solving abilities and commitment to continuous learning make me an invaluable asset to any project. Whether you need a freelance developer to tackle a specific challenge or a dedicated employee to enhance your development team, I am ready to contribute my expertise and drive to help you achieve your software development goals."
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "I have a diverse range of skills and experiences that I have cultivated over the years. My training and experience have allowed me to master several programming languages, as well as advanced software development techniques and agile methodologies. Focused on writing robust, clear, and efficient code that meets the highest quality standards.",
+    "experiences": [
+      {
+        "role": "Senior Frontend Developer",
+        "company": "Sumer Labs S.A. - Full time",
+        "date": "March 2022 - July 2024",
+        "location": "Bogota, Colombia",
+        "description": "Developed and optimized advanced user interfaces, enhancing functionality and usability of web applications, and led effective error resolution and technical debt reduction."
+      },
+      {
+        "role": "Tech Lead",
+        "company": "Chiper S.A.S. - Full time",
+        "date": "November 2021 - March 2022",
+        "location": "Bogota, Colombia",
+        "description": "Led technical planning and software architecture to improve performance and stability of our applications, guiding the team in implementing efficient solutions and optimizing existing code."
+      },
+      {
+        "role": "Senior Frontend Developer",
+        "company": "Ditech Group - Full time",
+        "date": "March 2021 - November 2021",
+        "location": "Bogota, Colombia",
+        "description": "Tasked with leading the development and design of critical web applications for Banco Popular, utilizing React.js and UX/UI design to significantly enhance user experience and operational efficiency."
+      },
+      {
+        "role": "Mid Frontend Developer",
+        "company": "Rappi S.A.S. - Full time",
+        "date": "December 2018 - March 2021",
+        "location": "Bogota, Colombia",
+        "description": "Played a key role in developing new functionalities and enhancements for Rappi’s platform, focusing on UX/UI design integration and ensuring high availability and performance of web services."
+      },
+      {
+        "role": "Mid Full Stack Developer",
+        "company": "Imaginamos",
+        "date": "April 2018 - November 2018",
+        "location": "Bogota, Colombia",
+        "description": "Developed web and mobile applications from scratch using technologies such as .Net and Angular, closely collaborating with the backend team to integrate content management systems and enhance platform scalability."
+      },
+      {
+        "role": "Jr Backend Developer",
+        "company": "Atento Colombia",
+        "date": "September 2017 - March 2018",
+        "location": "Bogota, Colombia",
+        "description": "Responsible for maintaining and developing critical functionalities for the database management system, using SQL to optimize operations and enhance data process security and efficiency."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "I have developed a series of skills and experiences throughout my career that I have refined over time. My experience includes programming in various languages, working with frameworks and different methodologies",
+    "skillWeb": "Web Development",
+    "skillApp": "App Development"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "If you are looking for a highly skilled and passionate software developer available for freelance projects or full-time positions, feel free to reach out to me. With extensive experience in various technologies and a strong commitment to quality and efficiency, I am ready to help your company achieve its technological goals. Let's discuss how I can contribute to your next project!",
+    "ctaTitle": "Send me a message",
+    "form": {
+      "nameLabel": "Your name*",
+      "emailLabel": "Your email*",
+      "messageLabel": "Your message*",
+      "namePlaceholder": "Enter your name",
+      "emailPlaceholder": "Enter your email",
+      "messagePlaceholder": "Enter your message",
+      "cta": "Send Message"
+    }
+  },
+  "footer": {
+    "rights": "© {{year}} Julian Rojas. All rights reserved."
   }
 }

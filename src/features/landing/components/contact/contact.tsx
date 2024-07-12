@@ -3,47 +3,51 @@ import styles from "./contact.module.scss";
 import { IconScrollMouse } from "~/components/icons";
 import SectionTitle from "../section-title";
 import { Send } from "react-feather";
+import { useTranslation } from "~/app/i18n";
 
 interface ContactProps {
   lng: string;
 }
  
-const Contact: FC<ContactProps> = ({
+const Contact: FC<ContactProps> = async ({
   lng,
 }) => {
+
+  const { t } = await useTranslation(lng, 'landing');
+
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>
-        <SectionTitle text="Contact" className={styles.title} />
+        <SectionTitle text={t('contact.title')} className={styles.title} />
         <p className={styles.description}>
-          I am always open to new opportunities and collaborations.{'\n'}Feel free to reach out.
+          {t('contact.description')}
         </p>
-        <h3 className={styles.ctaTitle}>Send me a message</h3>
-        <form action="" className={styles.form}>
+        <h3 className={styles.ctaTitle}>{t('contact.ctaTitle')}</h3>
+        <form className={styles.form}>
           <div className={styles.formGroup}>
             <fieldset className={styles.fieldset}>
               <label htmlFor="name" className={styles.label}>
-                Your name*
+                {t('contact.form.nameLabel')}
               </label>
               <div className={styles.inputBox}>
                 <input
                   id="name"
                   type="text"
                   className={styles.input}
-                  placeholder="Enter your name"
+                  placeholder={t('contact.form.namePlaceholder')}
                 />
               </div>
             </fieldset>
             <fieldset className={styles.fieldset}>
               <label htmlFor="email" className={styles.label}>
-                Your email*
+                {t('contact.form.emailLabel')}
               </label>
               <div className={styles.inputBox}>
                 <input
                   id="name"
                   type="text"
                   className={styles.input}
-                  placeholder="Enter your email"
+                  placeholder={t('contact.form.emailPlaceholder')}
                 />
               </div>
             </fieldset>
@@ -51,19 +55,19 @@ const Contact: FC<ContactProps> = ({
           <div className={styles.formGroup}>
             <fieldset className={styles.fieldset}>
               <label htmlFor="message" className={styles.label}>
-                Your message*
+                {t('contact.form.messageLabel')}
               </label>
               <div className={styles.inputBox}>
                 <textarea
                   id="message"
                   className={styles.input}
-                  placeholder="Enter your message"
+                  placeholder={t('contact.form.messagePlaceholder')}
                 />
               </div>
             </fieldset>
           </div>
           <button className={styles.cta}>
-            Send Message
+            {t('contact.form.cta')}
             <Send className={styles.icon} />
           </button>
         </form>

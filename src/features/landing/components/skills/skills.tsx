@@ -3,14 +3,17 @@ import styles from "./skills.module.scss";
 import { IconScrollMouse } from "~/components/icons";
 import SectionTitle from "../section-title";
 import { Monitor, Smartphone } from "react-feather";
+import { useTranslation } from "~/app/i18n";
 
 interface SkillsProps {
   lng: string;
 }
  
-const Skills: FC<SkillsProps> = ({
+const Skills: FC<SkillsProps> = async ({
   lng,
 }) => {
+
+  const { t } = await useTranslation(lng, 'landing');
 
   const skills = [
     {
@@ -39,21 +42,21 @@ const Skills: FC<SkillsProps> = ({
     <section className={styles.section}>
       <div className={styles.wrapper}>
         <IconScrollMouse className={styles.scrollIcon} />
-        <SectionTitle text="Skills" className={styles.title} />
+        <SectionTitle text={t('skills.title')} className={styles.title} />
         <p className={styles.description}>
-          I have a wide range of skills and experiences that I have honed over the years.{'\n'}I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works.{'\n'}Striving to never stop learning and improving.
+          {t('skills.description')}
         </p>
         <div className={styles.skills}>
           <div className={styles.skill}>
             <Monitor className={styles.icon} />
-            <h6 className={styles.name}>Web Development</h6>
+            <h6 className={styles.name}>{t('skills.skillWeb')}</h6>
             <p className={styles.text}>
               Html - Css - Js{'\n'}React - Vue
             </p>
           </div>
           <div className={styles.skill}>
             <Smartphone className={styles.icon} />
-            <h6 className={styles.name}>App Development</h6>
+            <h6 className={styles.name}>{t('skills.skillApp')}</h6>
             <p className={styles.text}>
               Flutter - React Native
             </p>

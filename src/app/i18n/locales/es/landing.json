@@ -1,6 +1,98 @@
 {
   "page": {
     "title": "Julian Rojas - Desarrollador Full Stack",
-    "description": "Desarrollador Full Stack con experiencia en el desarrollo de aplicaciones web y móviles."
+    "description": "Desarrollador Full Stack con experiencia en desarrollo de aplicaciones web y móviles."
+  },
+  "header": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia"
+  },
+  "hero": {
+    "mainTitle": "Desarrollador",
+    "presentationJob": "Desarrollador Full-stack",
+    "presentationTime": "Tiempo Completo / Freelance",
+    "ctaButton": "Descargar CV",
+    "mainText": "Hola\nSoy <strong>{{name}}</strong>,\nDesarrollador full-stack",
+    "resume": "Soy un desarrollador de software experimentado especializado en crear soluciones eficientes e innovadoras.\nYa sea como freelancer o empleado, aporto un enfoque meticuloso a cada proyecto, asegurando resultados de alta calidad.",
+    "ctaText": "Hablemos!",
+    "topSkillLanguages": "Lenguajes de\nProgramación",
+    "topSkillTools": "Herramientas de\nDesarrollo",
+    "topSkillYears": "Años de\nExperiencia"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "text": "Conóceme, soy un desarrollador de software altamente capacitado con pasión por crear soluciones de software innovadoras y eficientes. Con años de experiencia en la industria, he perfeccionado mi experiencia en varios lenguajes y marcos de programación, incluidos JavaScript, Python y C#. Ya sea trabajando como freelancer o como empleado dentro de un equipo, aporto un enfoque meticuloso y orientado a los detalles a cada proyecto. Mi capacidad para entender requisitos complejos y traducirlos en aplicaciones funcionales y fáciles de usar me ha ganado una reputación de excelencia y fiabilidad. Desde desarrollar aplicaciones web hasta diseñar sistemas backend escalables, estoy dedicado a entregar soluciones de alta calidad que cumplen y superan las expectativas del cliente.\n\nAdemás de mi destreza técnica, soy conocido por mis fuertes habilidades de comunicación y espíritu colaborativo. Prosperé en entornos dinámicos donde puedo trabajar de cerca con clientes y miembros del equipo para asegurar que todos los objetivos del proyecto se logren a tiempo y dentro del presupuesto. Mis habilidades proactivas de resolución de problemas y mi compromiso con el aprendizaje continuo me convierten en un activo invaluable para cualquier proyecto. Ya sea que necesites un desarrollador freelance para abordar un desafío específico o un empleado dedicado para mejorar tu equipo de desarrollo, estoy listo para contribuir con mi experiencia y impulso para ayudarte a alcanzar tus objetivos de desarrollo de software."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "description": "Tengo una diversa gama de habilidades y experiencias que he cultivado a lo largo de los años. Mi capacitación y experiencia me han permitido dominar varios lenguajes de programación, así como técnicas avanzadas de desarrollo de software y metodologías ágiles. Enfocado en escribir código robusto, claro y eficiente que cumple con los más altos estándares de calidad.",
+    "experiences": [
+      {
+        "role": "Desarrollador Senior Frontend",
+        "company": "Sumer Labs S.A. - Tiempo Completo",
+        "date": "Marzo 2022 - Julio 2024",
+        "location": "Bogotá, Colombia",
+        "description": "Desarrollé y optimicé interfaces de usuario avanzadas, mejorando la funcionalidad y usabilidad de aplicaciones web, y lideré la resolución efectiva de errores y reducción de deuda técnica."
+      },
+      {
+        "role": "Líder Técnico",
+        "company": "Chiper S.A.S. - Tiempo Completo",
+        "date": "Noviembre 2021 - Marzo 2022",
+        "location": "Bogotá, Colombia",
+        "description": "Lideré la planificación técnica y arquitectura de software para mejorar el rendimiento y estabilidad de nuestras aplicaciones, guiando al equipo en la implementación de soluciones eficientes y optimización de código existente."
+      },
+      {
+        "role": "Desarrollador Senior Frontend",
+        "company": "Ditech Group - Tiempo Completo",
+        "date": "Marzo 2021 - Noviembre 2021",
+        "location": "Bogotá, Colombia",
+        "description": "Encargado de liderar el desarrollo y diseño de aplicaciones web críticas para Banco Popular, utilizando React.js y diseño UX/UI para mejorar significativamente la experiencia del usuario y la eficiencia operativa."
+      },
+      {
+        "role": "Desarrollador Mid Frontend",
+        "company": "Rappi S.A.S. - Tiempo Completo",
+        "date": "Diciembre 2018 - Marzo 2021",
+        "location": "Bogotá, Colombia",
+        "description": "Desempeñé un papel clave en el desarrollo de nuevas funcionalidades y mejoras para la plataforma de Rappi, enfocándome en la integración de diseño UX/UI y asegurando alta disponibilidad y rendimiento de servicios web."
+      },
+      {
+        "role": "Desarrollador Mid Full Stack",
+        "company": "Imaginamos",
+        "date": "Abril 2018 - Noviembre 2018",
+        "location": "Bogotá, Colombia",
+        "description": "Desarrollé aplicaciones web y móviles desde cero utilizando tecnologías como .Net y Angular, colaborando estrechamente con el equipo backend para integrar sistemas de gestión de contenidos y mejorar la escalabilidad de la plataforma."
+      },
+      {
+        "role": "Desarrollador Jr Backend",
+        "company": "Atento Colombia",
+        "date": "Septiembre 2017 - Marzo 2018",
+        "location": "Bogotá, Colombia",
+        "description": "Responsable de mantener y desarrollar funcionalidades críticas para el sistema de gestión de bases de datos, utilizando SQL para optimizar operaciones y mejorar la seguridad y eficiencia del procesamiento de datos."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "description": "He desarrollado una serie de habilidades y experiencias a lo largo de mi carrera que he perfeccionado con el tiempo. Mi experiencia incluye programación en varios lenguajes, trabajo con frameworks y diferentes metodologías",
+    "skillWeb": "Desarrollo Web",
+    "skillApp": "Desarrollo de Aplicaciones"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Si buscas un desarrollador de software altamente calificado y apasionado disponible para proyectos freelance o puestos a tiempo completo, no dudes en contactarme. Con amplia experiencia en varias tecnologías y un fuerte compromiso con la calidad y la eficiencia, estoy listo para ayudar a tu empresa a alcanzar sus objetivos tecnológicos. ¡Hablemos de cómo puedo contribuir a tu próximo proyecto!",
+    "ctaTitle": "Envíame un mensaje",
+    "form": {
+      "nameLabel": "Tu nombre*",
+      "emailLabel": "Tu correo electrónico*",
+      "messageLabel": "Tu mensaje*",
+      "namePlaceholder": "Ingresa tu nombre",
+      "emailPlaceholder": "Ingresa tu correo electrónico",
+      "messagePlaceholder": "Ingresa tu mensaje",
+      "cta": "Enviar mensaje"
+    }
+  },
+  "footer": {
+    "rights": "© {{year}} Julian Rojas. Todos los derechos reservados."
   }
 }
