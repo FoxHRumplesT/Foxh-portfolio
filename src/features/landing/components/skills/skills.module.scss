@@ -1,0 +1,99 @@
+@import "../../../../assets/styles/fonts.scss";
+
+.section {
+  display: flex;
+  min-height: 100dvh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-2);
+  .wrapper {
+    display: flex;
+    max-width: 1664px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .scrollIcon {
+      z-index: 2;
+      margin: 0 0 64px 0;
+      color: var(--primary-1);
+    }
+    .title {
+      margin: 0 0 16px 0;
+    }
+    .description {
+      @include media-m;
+      margin: 0 0 64px 0;
+      text-align: center;
+      padding: 0 0 0 16px;
+      color: var(--white);
+      white-space: break-spaces;
+    }
+    .skills {
+      display: flex;
+      column-gap: 130px;
+      margin: 0 0 90px 0;
+      .skill {
+        row-gap: 8px;
+        display: flex;
+        min-width: 288px;
+        min-height: 132px;
+        padding: 16px 24px;
+        border-radius: 8px;
+        position: relative;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--primary-2);
+        &:before {
+          top: 0;
+          left: 0;
+          width: 8px;
+          content: "";
+          height: 100%;
+          position: absolute;
+          border-radius: 8px;
+          background-color: var(--blue-1);
+        }
+        .name {
+          @include menu-m;
+          white-space: break-spaces;
+        }
+        .text {
+          @include media-m;
+          white-space: break-spaces;
+        }
+      }
+    }
+    .technologies {
+      display: flex;
+      column-gap: 128px;
+      margin: 0 0 64px 0;
+      .item {
+        display: flex;
+        row-gap: 24px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        .iconCircle {
+          width: 144px;
+          height: 144px;
+          display: flex;
+          border-radius: 50%;
+          align-items: center;
+          color: var(--white);
+          justify-content: center;
+          .icon {
+            width: 64px;
+            height: 64px;
+          }
+        }
+        .name {
+          @include h2-m;
+          color: var(--white);
+          white-space: break-spaces;
+        }
+      }
+    }
+  }
+}

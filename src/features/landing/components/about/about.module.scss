@@ -2,6 +2,7 @@
 
 .wrapper {
   display: flex;
+  row-gap: 128px;
   min-height: 100dvh;
   position: relative;
   align-items: center;
@@ -21,7 +22,6 @@
   }
   .scrollIcon {
     z-index: 2;
-    margin: 0 0 128px 0;
     color: var(--primary-1);
   }
   .content {
