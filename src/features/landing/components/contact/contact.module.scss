@@ -110,12 +110,14 @@
         margin: 0 0 64px 0;
       }
       .ctaTitle {
+        font-size: 28px;
         text-wrap: nowrap;
         padding: 16px 20px;
       }
       .form {
         .formGroup {
           column-gap: 32px;
+          align-items: flex-end;
         }
       }
     }

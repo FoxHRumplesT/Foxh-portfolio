@@ -59,6 +59,7 @@
         }
         .name {
           @include menu-m;
+          text-align: center;
           white-space: break-spaces;
         }
         .text {
