@@ -47,6 +47,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="all" />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${ibmPlexMono.variable} ${ubuntu.variable}`}>{children}</body>
