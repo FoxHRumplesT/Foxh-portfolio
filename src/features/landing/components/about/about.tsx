@@ -18,7 +18,7 @@ const About: FC<AboutProps> = async ({
   const { t } = await useTranslation(lng, 'landing');
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="about">
       <Image className={styles.bgImage} src={bgImage} alt="About me descriptive image" />
       <div className={styles.wrapper}>
         <IconScrollMouse className={styles.scrollIcon} />

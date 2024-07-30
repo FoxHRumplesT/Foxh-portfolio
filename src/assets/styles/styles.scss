@@ -1,2 +1,6 @@
 @import './variables';
 @import './normalize';
+
+* {
+  scroll-behavior: smooth;
+}

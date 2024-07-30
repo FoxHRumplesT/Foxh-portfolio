@@ -16,7 +16,7 @@ const Experience: FC<ExperienceProps> = async ({
   const { t } = await useTranslation(lng, 'landing');
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="experience">
       <div className={styles.wrapper}>
         <IconScrollMouse className={styles.scrollIcon} />
         <SectionTitle text={t('experience.title')} className={styles.title} />

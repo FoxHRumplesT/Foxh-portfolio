@@ -16,7 +16,7 @@ const Header: FC<HeaderProps> = async ({
   const { t, i18n } = await useTranslation(lng, 'landing');
   
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="main">
       <div className={styles.wrapper}>
         <div className={styles.mainLogo}>
           <UiTag className={styles.logo} isClosed>J </UiTag>

@@ -90,7 +90,9 @@
       "emailPlaceholder": "Ingresa tu correo electrónico",
       "messagePlaceholder": "Ingresa tu mensaje",
       "cta": "Enviar mensaje"
-    }
+    },
+    "success": "Mensaje enviado correctamente",
+    "error": "Error enviando mensaje, verifica los campos y vuelve a intentarlo"
   },
   "footer": {
     "rights": "© {{year}} Julian Rojas. Todos los derechos reservados."

@@ -68,13 +68,15 @@ const Hero: FC<HeroProps> = async ({
           <UiTag className={`${styles.tag} ${styles.p}`}>p</UiTag>
           <p className={styles.resume}>{t('hero.resume')}</p>
           <UiTag className={styles.tag} isClosed>p</UiTag>
-          <button className={styles.mainCta}>
-            {t('hero.ctaText')}
-            <span className={styles.circle}>
-              <Mail className={styles.icon} />
-            </span>
-            <ArrowLeft className={styles.arrow} />
-          </button>
+          <Link href="#contact" style={{ textDecoration: 'none' }}>
+            <button className={styles.mainCta}>
+              {t('hero.ctaText')}
+              <span className={styles.circle}>
+                <Mail className={styles.icon} />
+              </span>
+              <ArrowLeft className={styles.arrow} />
+            </button>
+          </Link>
         </div>
         <div className={styles.topSkills}>
           <div className={styles.skill}>
