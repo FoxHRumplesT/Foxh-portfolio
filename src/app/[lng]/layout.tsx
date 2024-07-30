@@ -1,5 +1,4 @@
-import { dir } from 'i18next';
-import type { Metadata } from "next";
+import { dir } from 'i18next'; 
 import { IBM_Plex_Mono, Ubuntu } from "next/font/google";
 import "~/assets/styles/styles.scss";
 import { languages } from '../i18n/settings';

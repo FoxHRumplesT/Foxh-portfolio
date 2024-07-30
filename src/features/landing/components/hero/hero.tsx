@@ -27,7 +27,7 @@ const Hero: FC<HeroProps> = async ({
             <div className={styles.job}>{t('hero.presentationJob')}</div>
             <ul className={styles.info}>
               <li className={styles.item}>
-                <Mail className={styles.icon} />Jfrojas251@gmail.com
+                <Mail className={styles.icon} />julianrojasdev@gmail.com
               </li>
               <li className={styles.item}>
                 <MapPin className={styles.icon} />Bogotá, Colombia
