@@ -1,4 +1,5 @@
 import { dir } from 'i18next'; 
+import { Analytics } from "@vercel/analytics/react"
 import { IBM_Plex_Mono, Ubuntu } from "next/font/google";
 import "~/assets/styles/styles.scss";
 import { languages } from '../i18n/settings';
@@ -51,7 +52,10 @@ export default function RootLayout({
         <link rel="alternate" hrefLang={lng === 'es' ? 'en' : 'es'} href={`https://julianrojasdev.com/${lng === 'es' ? 'en' : 'es'}`} />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${ibmPlexMono.variable} ${ubuntu.variable}`}>{children}</body>
+      <body className={`${ibmPlexMono.variable} ${ubuntu.variable}`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

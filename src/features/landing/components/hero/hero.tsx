@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
-import { ArrowLeft, Briefcase, Download, Link, Mail, MapPin } from "react-feather";
+import Link from "next/link";
+import { ArrowLeft, Briefcase, Download, Link as FeatherLink, Mail, MapPin } from "react-feather";
 import styles from "./hero.module.scss";
 import UiTag from "~/components/ui-tag";
 import { useTranslation } from "~/app/i18n";
@@ -36,7 +37,7 @@ const Hero: FC<HeroProps> = async ({
                 <Briefcase className={styles.icon} />{t('hero.presentationTime')}
               </li>
               <li className={styles.item}>
-                <Link className={styles.icon} />Julianrojasdev.com
+                <FeatherLink className={styles.icon} />Julianrojasdev.com
               </li>
             </ul>
             <ul className={styles.skills}>
@@ -53,9 +54,11 @@ const Hero: FC<HeroProps> = async ({
                 React
               </li>
             </ul>
-            <button className={styles.cta}>
-              {t('hero.ctaButton')} <Download className={styles.icon} />
-            </button>
+            <Link href={`/cv.pdf`} target="_blank" style={{ textDecoration: 'none' }}>
+              <button className={styles.cta}>
+                {t('hero.ctaButton')} <Download className={styles.icon} />
+              </button>
+            </Link>
           </div>
         </div>
         <div className={styles.mainInfo}>

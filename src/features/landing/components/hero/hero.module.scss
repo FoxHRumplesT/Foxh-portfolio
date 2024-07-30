@@ -86,8 +86,10 @@
           display: flex;
           padding: 0 32px;
           column-gap: 16px;
+          color: var(--bg-1);
           border-radius: 32px;
           align-items: center;
+          text-decoration: none;
           background-color: var(--white);
         }
       }
