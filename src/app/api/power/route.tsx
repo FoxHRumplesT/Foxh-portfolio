@@ -1,4 +1,6 @@
-export const fetchCredentials = async () => {
+import { NextRequest, NextResponse } from "next/server";
+
+const fetchCredentials = async () => {
   const data = await fetch(
     `https://login.microsoftonline.com/46ce6912-4c3a-477e-b44d-ec89af1ae1d0/oauth2/v2.0/token`,
     {
@@ -15,4 +17,9 @@ export const fetchCredentials = async () => {
     }
   ).then((res) => res.json());
   return data.access_token;
+};
+
+export async function GET(request: NextRequest) {
+  const credentials = await fetchCredentials();
+  return NextResponse.json({ credentials });
 };
