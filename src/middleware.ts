@@ -11,6 +11,15 @@ export const config = {
 };
 
 export function middleware(req: NextRequest) {
+  // Si la ruta comienza con /api, no aplicamos la lógica de redirección
+  if (req.nextUrl.pathname.startsWith('/api')) {
+    const response = NextResponse.next();
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    return response;
+  }
+
   let lng: string | undefined;
 
   if (req.cookies.has(cookieName)) {
@@ -38,5 +47,9 @@ export function middleware(req: NextRequest) {
     return response;
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+  response.headers.set('Access-Control-Allow-Origin', '*');
+  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  return response;
 };
