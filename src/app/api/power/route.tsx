@@ -16,7 +16,7 @@ const fetchCredentials = async () => {
       }),
     }
   ).then((res) => res.json());
-  return data.access_token;
+  return data;
 };
 
 export async function GET(request: NextRequest) {
