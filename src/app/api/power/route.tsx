@@ -7,10 +7,10 @@ export const fetchCredentials = async () => {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
       body: JSON.stringify({
-        client_id: 'e1d78f0f-5708-45c5-81d5-a7cb1a9795a4',
+        client_id: process.env.POWER_CLIENT_ID,
         scope: 'https://analysis.windows.net/powerbi/api/.default',
         grant_type: 'client_credentials',
-        client_secret: 'gUL8Q~V-3psGtGlLGp1AC~~qBmraaiSTF_Jkyccm',
+        client_secret: process.env.POWER_SECRET,
       }),
     }
   ).then((res) => res.json());
