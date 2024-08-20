@@ -21,14 +21,7 @@ const fetchCredentials = async () => {
 
 export async function GET(request: NextRequest) {
   const credentials = await fetchCredentials();
-  
-  return NextResponse.json({ credentials }, {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    },
-  });
+  return NextResponse.json({ credentials });
 }
 
 export async function OPTIONS(request: NextRequest) {
