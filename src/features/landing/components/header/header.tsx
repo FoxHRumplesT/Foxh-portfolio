@@ -44,14 +44,14 @@ const Header: FC<HeaderProps> = async ({
         <section className={styles.socials}>
           <a
             className={styles.social}
-            href="https://www.linkedin.com/in/julian-rojas"
+            href="https://www.linkedin.com/in/julian-rojas-382297164/"
             target="_blank"
             rel="noreferrer">
             <Linkedin className={styles.icon} />LinkedIn
           </a>
           <a
             className={styles.social}
-            href="https://www.linkedin.com/in/julian-rojas"
+            href="https://www.instagram.com/julianrojas933/"
             target="_blank"
             rel="noreferrer">
             <Instagram className={styles.icon} />Instagram

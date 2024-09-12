@@ -31,7 +31,7 @@ const Hero: FC<HeroProps> = async ({
                 <Mail className={styles.icon} />julianrojasdev@gmail.com
               </li>
               <li className={styles.item}>
-                <MapPin className={styles.icon} />Bogotá, Colombia
+                <MapPin className={styles.icon} />Melbourne, Australia
               </li>
               <li className={styles.item}>
                 <Briefcase className={styles.icon} />{t('hero.presentationTime')}

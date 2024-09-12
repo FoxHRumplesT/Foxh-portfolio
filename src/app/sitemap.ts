@@ -8,8 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       alternates: {
         languages: {
-          es: 'https://acme.com/es',
-          en: 'https://acme.com/en',
+          es: 'https://julianrojasdev.com/es',
+          en: 'https://julianrojasdev.com/en',
         },
       },
       priority: 1,
