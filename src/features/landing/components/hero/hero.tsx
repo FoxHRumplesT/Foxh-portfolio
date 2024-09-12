@@ -54,7 +54,7 @@ const Hero: FC<HeroProps> = async ({
                 React
               </li>
             </ul>
-            <Link href={`/cv.pdf`} target="_blank" style={{ textDecoration: 'none' }}>
+            <Link href={`/cv-2.pdf`} target="_blank" style={{ textDecoration: 'none' }}>
               <button className={styles.cta}>
                 {t('hero.ctaButton')} <Download className={styles.icon} />
               </button>
